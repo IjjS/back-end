@@ -64,14 +64,8 @@ jobs:
           min-coverage-changed-files: 60
           update-comment: true
 
-      - name: Flush Checkstyle report of main code on the pull request
+      - name: Flush Checkstyle report on the pull request
         uses: lcollins/checkstyle-github-action@v2.0.0
         with:
-          path: '**/build/reports/checkstyle/main.xml'
-          title: 📝 Checkstyle report of main
-
-      - name: Flush Checkstyle report of test code on the pull request
-        uses: lcollins/checkstyle-github-action@v2.0.0
-        with:
-          path: '**/build/reports/checkstyle/test.xml'
-          title: 📝 Checkstyle report of test
+          path: '**/build/reports/checkstyle/**.xml'
+          title: 📝 Checkstyle Report
