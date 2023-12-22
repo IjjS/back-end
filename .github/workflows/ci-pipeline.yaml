@@ -67,11 +67,11 @@ jobs:
       - name: Flush Checkstyle report of main code on the pull request
         uses: lcollins/checkstyle-github-action@v2.0.0
         with:
-          path: '**/build/reports/main.xml'
+          path: '**/build/reports/checkstyle/main.xml'
           title: 📝 Checkstyle report of main
 
       - name: Flush Checkstyle report of test code on the pull request
         uses: lcollins/checkstyle-github-action@v2.0.0
         with:
-          path: '**/build/reports/test.xml'
+          path: '**/build/reports/checkstyle/test.xml'
           title: 📝 Checkstyle report of test
